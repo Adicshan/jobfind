@@ -1,42 +1,112 @@
+import React, { useState } from "react";
 import "./Home.css";
-const Home = () => {
+
+const jobsData = [
+    { id: 1,
+    role: "Full Stack Software Engineer – Assistant Manager (CL4)",
+    company: "Deloitte",
+    location: "Hyderabad, Telangana, India",
+    shortDesc:
+      "Work on high-visibility projects using modern cloud and full-stack technologies.",
+    experience: "5+ years",
+    skills:
+      "React, Angular, NodeJS, Python, Java, .NET, Cloud (AWS/Azure/GCP)",
+    apply:
+      "https://usijobs.deloitte.com/en_US/careersUSI/Login?jobId=320953",
+    fullDesc: `As a Full-Stack Software Engineer, you will design, develop and deploy 
+    advanced software solutions. You will collaborate with cross-functional teams, 
+    apply modern engineering practices, work with cloud-native technologies and 
+    deliver scalable, high-quality solutions.`
+  },
+
+  {
+    id: 2,
+    role: "Software Developer",
+    company: "IBM",
+    location: "India",
+    shortDesc:
+      "Build hybrid-cloud and AI solutions using modern Java technologies.",
+    experience: "3–5 years",
+    skills:
+      "Java 8+, Spring, Hibernate, OOP, Multithreading, JSP/Servlets",
+    apply:
+      "https://careers.ibm.com/en_US/careers/JobDetail?jobId=67921",
+    fullDesc: `As a Software Developer at IBM, you will participate in the full 
+    software development lifecycle including design, coding, testing and support.
+
+    Responsibilities:
+    • Analyze and improve existing failures  
+    • Engage in all SDLC phases  
+    • Drive stakeholder discussions  
+    • Build scalable cloud & AI solutions  
+
+    Requirements:
+    • Java 8+, Spring, Hibernate  
+    • Strong OOP concepts  
+    • Multithreading, JVM, Collections  
+    • Maven, Git, Design Patterns`
+  }
+]
+
+
+export default function Home() {
+  const [selectedJob, setSelectedJob] = useState(null);
+
   return (
     <div className="home-container">
-        <div className="jobs">
-    <p><b>Role:</b> Full Stack Software Engineer – Assistant Manager (CL4)</p>
 
-    <p><b>Company:</b> Deloitte</p>
+      <h2 className="title">Latest Job Openings</h2>
 
-    <p><b>Location:</b> Hyderabad, Telangana, India</p>
+      <div className="jobs">
+         {jobsData.map((job) => (
+          <div
+            className="job-card"
+            key={job.id}
+            onClick={() => setSelectedJob(job)}
+          >
+            <h3>{job.role}</h3>
+            <p><b>Company:</b> {job.company}</p>
+            <p><b>Location:</b> {job.location}</p>
+            <p>{job.shortDesc}</p>
+          </div>
+        ))}
+        
+      </div>
+        {selectedJob && (
+        <div className="modal">
+          <div className="modal-content">
 
-    <p><b>Description:</b> 
-        As a Full-Stack Software Engineer, you will work on high-visibility projects,
-        designing, developing, and deploying advanced software solutions. You will
-        collaborate with cross-functional teams, apply modern engineering practices,
-        work with cloud-native technologies, and deliver scalable, high-quality
-        solutions that drive business value. The role requires strong expertise in
-        React, Angular, NodeJS, Python, cloud platforms (AWS/Azure/GCP), DevSecOps,
-        and Agile methodologies.
-    </p>
+            <span
+              className="close"
+              onClick={() => setSelectedJob(null)}
+            >
+              &times;
+            </span>
 
-    <p><b>Experience Required:</b> 5+ years</p>
+            <h2>{selectedJob.role}</h2>
 
-    <p><b>Skills:</b> React, Angular, NodeJS, Python, Java, .NET, SQL/NoSQL, 
-        Cloud (AWS/Azure/GCP), DevSecOps, Microservices, AI/ML (Preferred)
-    </p>
+            <p><b>Company:</b> {selectedJob.company}</p>
+            <p><b>Location:</b> {selectedJob.location}</p>
+            <p><b>Experience:</b> {selectedJob.experience}</p>
+            <p><b>Skills:</b> {selectedJob.skills}</p>
 
-    <p><b>Apply:</b> 
-        <a href="https://usijobs.deloitte.com/en_US/careersUSI/Login?jobId=320953" 
-           target="_blank" 
-           rel="noreferrer">
-           Apply Now
-        </a>
-    </p>
-</div>
+            <p className="full-desc">
+              {selectedJob.fullDesc}
+            </p>
 
-    
+            <a
+              href={selectedJob.apply}
+              target="_blank"
+              rel="noreferrer"
+              className="apply-btn"
+            >
+              Apply Now
+            </a>
+
+          </div>
+        </div>
+      )}
+     
     </div>
   );
-};
-
-export default Home;
+}
