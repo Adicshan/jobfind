@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./Home.css";
+import saraswati_mata from "./images/saraswati_mata.jpg";
+
 
 const jobsData = [
-    { id: 1,
+  { 
+    id: 1,
     role: "Full Stack Software Engineer – Assistant Manager (CL4)",
     company: "Deloitte",
     location: "Hyderabad, Telangana, India",
@@ -45,8 +48,112 @@ const jobsData = [
     • Strong OOP concepts  
     • Multithreading, JVM, Collections  
     • Maven, Git, Design Patterns`
-  }
-]
+  },
+
+  {
+    id: 3,
+    role: "Software Development Engineer (SDE I – L4)",
+    company: "Amazon (AFFS Team)",
+    location: "India",
+    shortDesc:
+      "Design and build scalable distributed systems in a fast-paced agile environment.",
+    experience: "3+ years",
+    salary: "₹24–30 LPA (including bonus & sign-on)",
+    skills:
+      "Java / C++ / Python, Data Structures, Distributed Systems, OOP, System Design",
+    apply:
+      "https://www.amazon.jobs/",
+    fullDesc: `Key Job Responsibilities:
+    • Drive business decisions with the team  
+    • Design, implement, test, deploy and maintain solutions  
+    • Write high-quality distributed system software  
+    • Follow best engineering practices  
+    • Work in an agile environment  
+
+    Basic Qualifications:
+    • 3+ years professional development experience  
+    • 2+ years system design experience  
+    • Proficiency in at least one programming language  
+
+    Amazon supports inclusive hiring and accommodations.`
+  },
+
+  {
+    id: 4,
+    role: "Data Engineer",
+    company: "Atlassian",
+    location: "Remote / Hybrid (Global)",
+    shortDesc:
+      "Build scalable data platforms and multi-petabyte data lakes.",
+    experience: "5+ years",
+    skills:
+      "Python, Java, Scala, SQL, Spark, Databricks, Airflow, AWS, Data Modeling",
+    apply:
+      "https://www.atlassian.com/company/careers",
+    fullDesc: `Key Responsibilities:
+    • Partner with PMs, Engineering & Business teams  
+    • Build scalable data models & pipelines  
+    • ETL from multiple sources into data warehouse  
+    • Improve data quality & governance  
+    • Implement new data technologies  
+    • Coach junior engineers  
+
+    Requirements:
+    • BS in CS or equivalent  
+    • 5+ years experience as Data/Software Engineer  
+    • Strong Python/Java/Scala  
+    • SQL & data warehousing knowledge  
+    • Experience with Spark, Hive, Airflow  
+    • AWS (EMR, Kinesis, S3, RDS, SQS)  
+    • Agile, TDD, CI/CD  
+
+    Preferred:
+    • Kappa architecture  
+    • DBT experience  
+    • Open source contributions  
+
+    Benefits:
+    • Remote-friendly work  
+    • Health & wellbeing perks  
+    • Paid volunteer days  
+ `
+
+  },
+  {
+  id: 5,
+  role: "Staff Software Engineer – Networking",
+  company: "Databricks",
+  location: "Bengaluru, India",
+  shortDesc:
+    "Build large-scale networking services powering Databricks cloud platform.",
+  experience: "12+ years",
+  salary: "₹23–42 LPA",
+  skills:
+    "Python / Java / Scala / C++, Distributed Systems, Networking, SaaS",
+  apply:
+    "https://www.databricks.com/company/careers/engineering---pipeline/staff-software-engineer--networking-7648669002",
+  fullDesc: `Responsibilities:
+  • Design backend connectivity services  
+  • Build systems powering millions of VMs  
+  • Lead distributed system architecture  
+  • Work with product & infra teams  
+  • Solve multi-cloud networking challenges  
+
+  Requirements:
+  • 12+ years coding experience  
+  • 7+ years building distributed systems  
+  • Strong networking background  
+  • SaaS / Service-oriented architecture experience  
+
+  Benefits:
+  • Competitive salary  
+  • Global company exposure  
+  • Inclusive work culture`
+}
+
+];
+
+
 
 
 export default function Home() {
@@ -54,6 +161,7 @@ export default function Home() {
 
   return (
     <div className="home-container">
+      <img src={saraswati_mata} alt="Saraswati Mata" className="header-image" />
 
       <h2 className="title">Latest Job Openings</h2>
 

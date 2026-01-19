@@ -1,8 +1,17 @@
 .home-container {
   padding: 50px;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f0f9ff, #e0e7ff);
+  background: white;
   font-family: "Segoe UI", sans-serif;
+}
+.header-image {
+  position: absolute;
+  top: 10px;          /* adjust spacing from top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;       /* adjust size if needed */
+  height: auto;
+  border: none;
 }
 
 /* Title */
@@ -15,7 +24,8 @@
 
 /* Cards wrapper */
 .jobs {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
@@ -23,7 +33,7 @@
 
 /* Job Card */
 .job-card {
-  width: 340px;
+  width: 250px;
   background: white;
   padding: 25px;
   border-radius: 16px;
