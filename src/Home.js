@@ -149,7 +149,109 @@ const jobsData = [
   • Competitive salary  
   • Global company exposure  
   • Inclusive work culture`
+},
+{
+  id: 6,
+  role: "Applications Developer",
+  company: "Oracle",
+  location: "Hyderabad, Telangana, India",
+  shortDesc:
+    "Develop enterprise cloud applications using Java, REST and microservices for Procurement Cloud.",
+  experience: "3 – 5+ years",
+  skills:
+    "Java, Spring, REST, Microservices, JavaScript, SQL, AI Agents",
+  apply:
+    "https://www.oracle.com/careers/",
+  fullDesc: `Key Responsibilities:
+    • Analyze, design, develop and debug enterprise applications  
+    • Build complex enhancements and resolve critical bugs  
+    • Perform unit testing and regression testing  
+    • Collaborate with QA and product management teams  
+    • Interact with customers to resolve issues  
+    • Contribute to AI-driven and microservices-based solutions  
+
+    Technology Stack:
+    • Java, JavaScript  
+    • Oracle VB/JET  
+    • REST APIs  
+    • SQL / PL-SQL  
+    • Microservices  
+    • AI Agents, Gen-AI, Agentic workflows  
+
+    Requirements:
+    • BS / MS degree or equivalent experience  
+    • 4+ years of software engineering experience  
+    • Strong Java & OOPS concepts  
+    • Spring, REST, Microservices  
+    • JavaScript / JET  
+
+    Preferred:
+    • JDBC, XML  
+    • Unix/Linux  
+    • ADF  
+    • AI/ML  
+    • Scrum  
+
+    Team:
+    • Fusion Procurement Development  
+    • Procurement Cloud  
+ `
+},
+{
+  id: 7,
+  role: "Software Engineer II - UI (Angular)",
+  company: "JPMorganChase",
+  location: "India",
+  shortDesc:
+    "Design and develop secure, scalable UI applications using Angular/React within Consumer & Community Banking.",
+
+  experience: "4+ years",
+
+  skills:
+    "Angular, React, JavaScript, HTML, CSS, Bootstrap, Angular Material, Micro Frontend, Accessibility",
+
+  apply:
+    "https://careers.jpmorganchase.com/",
+
+  fullDesc: `Key Responsibilities:
+    • Design, develop and troubleshoot UI applications  
+    • Write secure, high-quality code  
+    • Work with upstream & downstream systems  
+    • Apply SDLC tools for automation  
+    • Debug and resolve technical issues  
+    • Analyze large datasets for decision making  
+    • Follow secure coding standards  
+    • Promote inclusive team culture  
+
+    Technology Stack:
+    • Angular / React  
+    • JavaScript  
+    • HTML, CSS  
+    • Bootstrap, Angular Material  
+    • Micro Frontend Architecture  
+
+    Requirements:
+    • 4+ years frontend experience  
+    • Strong JavaScript fundamentals  
+    • Experience with Angular/React  
+    • Corporate project experience  
+    • End-to-end SDLC knowledge  
+    • CI/CD exposure  
+    • Security & resiliency practices  
+
+    Preferred:
+    • Accessibility standards  
+    • Cloud exposure  
+    • AI / ML basics  
+    • Mobile development  
+
+    Team:
+    • Consumer & Community Banking  
+    • Agile Scrum Teams  
+ `
 }
+
+
 
 ];
 
