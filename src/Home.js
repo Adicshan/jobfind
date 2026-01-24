@@ -249,7 +249,58 @@ const jobsData = [
     • Consumer & Community Banking  
     • Agile Scrum Teams  
  `
+},
+{
+  id: 8,
+  role: "Software Engineer / Software Developer I",
+  company: "Oracle",
+  location: "Bengaluru, Karnataka, India",
+
+  shortDesc:
+    "Design, develop, troubleshoot and debug software programs for enterprise applications and cloud solutions.",
+
+  experience: "1 – 3+ years",
+
+  skills:
+    "Java, Python, SQL, Data Structures, Algorithms, OOPS, Debugging, Software Development Life Cycle",
+
+  apply:
+    "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/jobs/preview/321672/",
+
+  fullDesc: `Key Responsibilities:
+    • Design, develop, troubleshoot and debug software programs  
+    • Work on enterprise-level applications and cloud products  
+    • Analyze requirements and implement software solutions  
+    • Fix bugs and improve existing application performance  
+    • Collaborate with cross-functional engineering teams  
+    • Follow coding standards and best practices  
+
+    Technology Stack:
+    • Java / Python  
+    • SQL / Databases  
+    • Data Structures & Algorithms  
+    • Cloud Technologies  
+    • Enterprise Software Systems  
+
+    Requirements:
+    • Bachelor’s degree in Computer Science or related field  
+    • 1–3+ years of software development experience  
+    • Strong problem-solving and coding skills  
+    • Understanding of SDLC  
+    • Ability to debug and troubleshoot applications  
+
+    Preferred:
+    • Cloud exposure (OCI / AWS / Azure)  
+    • Unix / Linux basics  
+    • REST APIs  
+    • Agile / Scrum methodology  
+
+    Team:
+    • Oracle Software Engineering  
+    • Cloud & Enterprise Applications  
+ `
 }
+
 
 
 
