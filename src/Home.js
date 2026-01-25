@@ -1,310 +1,153 @@
 import React, { useState } from "react";
 import "./Home.css";
 import saraswati_mata from "./images/saraswati_mata.jpg";
+import deloitte from "./images/deloitte.png";
+import ibm from "./images/ibm.png";
+import amazon from "./images/amazon.png";
+import atlassian from "./images/atlassian.png";
+import databricks from "./images/databricks.png";
+import oracle from "./images/oracle.png";
+import jpmorgan from "./images/JpmorganChase.png";
 
 
 const jobsData = [
-  { 
+  {
     id: 1,
     role: "Full Stack Software Engineer – Assistant Manager (CL4)",
     company: "Deloitte",
+    logo: deloitte,
     location: "Hyderabad, Telangana, India",
+    package: "₹18 – 30 LPA",
     shortDesc:
       "Work on high-visibility projects using modern cloud and full-stack technologies.",
     experience: "5+ years",
     skills:
-      "React, Angular, NodeJS, Python, Java, .NET, Cloud (AWS/Azure/GCP)",
+      "React, Angular, NodeJS, Python, Java, .NET, AWS, Azure, GCP",
     apply:
       "https://usijobs.deloitte.com/en_US/careersUSI/Login?jobId=320953",
-    fullDesc: `As a Full-Stack Software Engineer, you will design, develop and deploy 
-    advanced software solutions. You will collaborate with cross-functional teams, 
-    apply modern engineering practices, work with cloud-native technologies and 
-    deliver scalable, high-quality solutions.`
+    fullDesc: `Design, develop and deploy advanced software solutions in a cloud-native environment.`
   },
 
   {
     id: 2,
     role: "Software Developer",
     company: "IBM",
+    logo: ibm,
     location: "India",
+    package: "₹10 – 18 LPA",
     shortDesc:
       "Build hybrid-cloud and AI solutions using modern Java technologies.",
     experience: "3–5 years",
     skills:
-      "Java 8+, Spring, Hibernate, OOP, Multithreading, JSP/Servlets",
+      "Java, Spring, Hibernate, OOP, Multithreading, JSP, Servlets",
     apply:
-      "https://careers.ibm.com/en_US/careers/JobDetail?jobId=67921",
-    fullDesc: `As a Software Developer at IBM, you will participate in the full 
-    software development lifecycle including design, coding, testing and support.
-
-    Responsibilities:
-    • Analyze and improve existing failures  
-    • Engage in all SDLC phases  
-    • Drive stakeholder discussions  
-    • Build scalable cloud & AI solutions  
-
-    Requirements:
-    • Java 8+, Spring, Hibernate  
-    • Strong OOP concepts  
-    • Multithreading, JVM, Collections  
-    • Maven, Git, Design Patterns`
+      "https://careers.ibm.com/",
+    fullDesc: `Work across the full SDLC to build scalable enterprise applications.`
   },
 
   {
     id: 3,
     role: "Software Development Engineer (SDE I – L4)",
-    company: "Amazon (AFFS Team)",
+    company: "Amazon",
+    logo: amazon,
     location: "India",
+    package: "₹24 – 30 LPA",
     shortDesc:
-      "Design and build scalable distributed systems in a fast-paced agile environment.",
+      "Design and build scalable distributed systems in a fast-paced environment.",
     experience: "3+ years",
-    salary: "₹24–30 LPA (including bonus & sign-on)",
     skills:
-      "Java / C++ / Python, Data Structures, Distributed Systems, OOP, System Design",
+      "Java, C++, Python, Data Structures, OOP, System Design",
     apply:
       "https://www.amazon.jobs/",
-    fullDesc: `Key Job Responsibilities:
-    • Drive business decisions with the team  
-    • Design, implement, test, deploy and maintain solutions  
-    • Write high-quality distributed system software  
-    • Follow best engineering practices  
-    • Work in an agile environment  
-
-    Basic Qualifications:
-    • 3+ years professional development experience  
-    • 2+ years system design experience  
-    • Proficiency in at least one programming language  
-
-    Amazon supports inclusive hiring and accommodations.`
+    fullDesc: `Build and maintain highly available distributed systems at scale.`
   },
 
   {
     id: 4,
     role: "Data Engineer",
     company: "Atlassian",
-    location: "Remote / Hybrid (Global)",
+    logo:atlassian,
+    location: "Remote / Hybrid",
+    package: "₹20 – 35 LPA",
     shortDesc:
       "Build scalable data platforms and multi-petabyte data lakes.",
     experience: "5+ years",
     skills:
-      "Python, Java, Scala, SQL, Spark, Databricks, Airflow, AWS, Data Modeling",
+      "Python, Java, Scala, Spark, SQL, Databricks, AWS",
     apply:
       "https://www.atlassian.com/company/careers",
-    fullDesc: `Key Responsibilities:
-    • Partner with PMs, Engineering & Business teams  
-    • Build scalable data models & pipelines  
-    • ETL from multiple sources into data warehouse  
-    • Improve data quality & governance  
-    • Implement new data technologies  
-    • Coach junior engineers  
-
-    Requirements:
-    • BS in CS or equivalent  
-    • 5+ years experience as Data/Software Engineer  
-    • Strong Python/Java/Scala  
-    • SQL & data warehousing knowledge  
-    • Experience with Spark, Hive, Airflow  
-    • AWS (EMR, Kinesis, S3, RDS, SQS)  
-    • Agile, TDD, CI/CD  
-
-    Preferred:
-    • Kappa architecture  
-    • DBT experience  
-    • Open source contributions  
-
-    Benefits:
-    • Remote-friendly work  
-    • Health & wellbeing perks  
-    • Paid volunteer days  
- `
-
+    fullDesc: `Design high-performance data pipelines and analytics platforms.`
   },
+
   {
-  id: 5,
-  role: "Staff Software Engineer – Networking",
-  company: "Databricks",
-  location: "Bengaluru, India",
-  shortDesc:
-    "Build large-scale networking services powering Databricks cloud platform.",
-  experience: "12+ years",
-  salary: "₹23–42 LPA",
-  skills:
-    "Python / Java / Scala / C++, Distributed Systems, Networking, SaaS",
-  apply:
-    "https://www.databricks.com/company/careers/engineering---pipeline/staff-software-engineer--networking-7648669002",
-  fullDesc: `Responsibilities:
-  • Design backend connectivity services  
-  • Build systems powering millions of VMs  
-  • Lead distributed system architecture  
-  • Work with product & infra teams  
-  • Solve multi-cloud networking challenges  
+    id: 5,
+    role: "Staff Software Engineer – Networking",
+    company: "Databricks",
+    logo: databricks,
+    location: "Bengaluru, India",
+    package: "₹23 – 42 LPA",
+    shortDesc:
+      "Build large-scale networking services for cloud infrastructure.",
+    experience: "12+ years",
+    skills:
+      "Python, Java, C++, Distributed Systems, Networking, SaaS",
+    apply:
+      "https://www.databricks.com/company/careers",
+    fullDesc: `Lead architecture and design of multi-cloud networking systems.`
+  },
 
-  Requirements:
-  • 12+ years coding experience  
-  • 7+ years building distributed systems  
-  • Strong networking background  
-  • SaaS / Service-oriented architecture experience  
+  {
+    id: 6,
+    role: "Applications Developer",
+    company: "Oracle",
+    logo: oracle,
+    location: "Hyderabad, Telangana, India",
+    package: "₹12 – 20 LPA",
+    shortDesc:
+      "Develop enterprise cloud applications using Java and microservices.",
+    experience: "3 – 5+ years",
+    skills:
+      "Java, Spring, REST APIs, Microservices, SQL",
+    apply:
+      "https://www.oracle.com/careers/",
+    fullDesc: `Develop and enhance Oracle Procurement Cloud applications.`
+  },
 
-  Benefits:
-  • Competitive salary  
-  • Global company exposure  
-  • Inclusive work culture`
-},
-{
-  id: 6,
-  role: "Applications Developer",
-  company: "Oracle",
-  location: "Hyderabad, Telangana, India",
-  shortDesc:
-    "Develop enterprise cloud applications using Java, REST and microservices for Procurement Cloud.",
-  experience: "3 – 5+ years",
-  skills:
-    "Java, Spring, REST, Microservices, JavaScript, SQL, AI Agents",
-  apply:
-    "https://www.oracle.com/careers/",
-  fullDesc: `Key Responsibilities:
-    • Analyze, design, develop and debug enterprise applications  
-    • Build complex enhancements and resolve critical bugs  
-    • Perform unit testing and regression testing  
-    • Collaborate with QA and product management teams  
-    • Interact with customers to resolve issues  
-    • Contribute to AI-driven and microservices-based solutions  
+  {
+    id: 7,
+    role: "Software Engineer II – UI (Angular)",
+    company: "JPMorganChase",
+    logo: jpmorgan,
+    location: "India",
+    package: "₹14 – 22 LPA",
+    shortDesc:
+      "Build secure, scalable UI applications for banking platforms.",
+    experience: "4+ years",
+    skills:
+      "Angular, React, JavaScript, HTML, CSS, Bootstrap",
+    apply:
+      "https://careers.jpmorganchase.com/",
+    fullDesc: `Develop enterprise-grade UI solutions with accessibility standards.`
+  },
 
-    Technology Stack:
-    • Java, JavaScript  
-    • Oracle VB/JET  
-    • REST APIs  
-    • SQL / PL-SQL  
-    • Microservices  
-    • AI Agents, Gen-AI, Agentic workflows  
-
-    Requirements:
-    • BS / MS degree or equivalent experience  
-    • 4+ years of software engineering experience  
-    • Strong Java & OOPS concepts  
-    • Spring, REST, Microservices  
-    • JavaScript / JET  
-
-    Preferred:
-    • JDBC, XML  
-    • Unix/Linux  
-    • ADF  
-    • AI/ML  
-    • Scrum  
-
-    Team:
-    • Fusion Procurement Development  
-    • Procurement Cloud  
- `
-},
-{
-  id: 7,
-  role: "Software Engineer II - UI (Angular)",
-  company: "JPMorganChase",
-  location: "India",
-  shortDesc:
-    "Design and develop secure, scalable UI applications using Angular/React within Consumer & Community Banking.",
-
-  experience: "4+ years",
-
-  skills:
-    "Angular, React, JavaScript, HTML, CSS, Bootstrap, Angular Material, Micro Frontend, Accessibility",
-
-  apply:
-    "https://careers.jpmorganchase.com/",
-
-  fullDesc: `Key Responsibilities:
-    • Design, develop and troubleshoot UI applications  
-    • Write secure, high-quality code  
-    • Work with upstream & downstream systems  
-    • Apply SDLC tools for automation  
-    • Debug and resolve technical issues  
-    • Analyze large datasets for decision making  
-    • Follow secure coding standards  
-    • Promote inclusive team culture  
-
-    Technology Stack:
-    • Angular / React  
-    • JavaScript  
-    • HTML, CSS  
-    • Bootstrap, Angular Material  
-    • Micro Frontend Architecture  
-
-    Requirements:
-    • 4+ years frontend experience  
-    • Strong JavaScript fundamentals  
-    • Experience with Angular/React  
-    • Corporate project experience  
-    • End-to-end SDLC knowledge  
-    • CI/CD exposure  
-    • Security & resiliency practices  
-
-    Preferred:
-    • Accessibility standards  
-    • Cloud exposure  
-    • AI / ML basics  
-    • Mobile development  
-
-    Team:
-    • Consumer & Community Banking  
-    • Agile Scrum Teams  
- `
-},
-{
-  id: 8,
-  role: "Software Engineer / Software Developer I",
-  company: "Oracle",
-  location: "Bengaluru, Karnataka, India",
-
-  shortDesc:
-    "Design, develop, troubleshoot and debug software programs for enterprise applications and cloud solutions.",
-
-  experience: "1 – 3+ years",
-
-  skills:
-    "Java, Python, SQL, Data Structures, Algorithms, OOPS, Debugging, Software Development Life Cycle",
-
-  apply:
-    "https://eeho.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/jobsearch/jobs/preview/321672/",
-
-  fullDesc: `Key Responsibilities:
-    • Design, develop, troubleshoot and debug software programs  
-    • Work on enterprise-level applications and cloud products  
-    • Analyze requirements and implement software solutions  
-    • Fix bugs and improve existing application performance  
-    • Collaborate with cross-functional engineering teams  
-    • Follow coding standards and best practices  
-
-    Technology Stack:
-    • Java / Python  
-    • SQL / Databases  
-    • Data Structures & Algorithms  
-    • Cloud Technologies  
-    • Enterprise Software Systems  
-
-    Requirements:
-    • Bachelor’s degree in Computer Science or related field  
-    • 1–3+ years of software development experience  
-    • Strong problem-solving and coding skills  
-    • Understanding of SDLC  
-    • Ability to debug and troubleshoot applications  
-
-    Preferred:
-    • Cloud exposure (OCI / AWS / Azure)  
-    • Unix / Linux basics  
-    • REST APIs  
-    • Agile / Scrum methodology  
-
-    Team:
-    • Oracle Software Engineering  
-    • Cloud & Enterprise Applications  
- `
-}
-
-
-
-
+  {
+    id: 8,
+    role: "Software Engineer / Software Developer I",
+    company: "Oracle",
+    logo: oracle,
+    location: "Bengaluru, Karnataka, India",
+    package: "₹8 – 14 LPA",
+    shortDesc:
+      "Develop and debug enterprise software applications.",
+    experience: "1 – 3+ years",
+    skills:
+      "Java, Python, SQL, DSA, OOPS",
+    apply:
+      "https://eeho.fa.us2.oraclecloud.com/",
+    fullDesc: `Entry-level role focused on core software engineering fundamentals.`
+  }
 ];
+
 
 
 
@@ -316,58 +159,129 @@ export default function Home() {
     <div className="home-container">
       <img src={saraswati_mata} alt="Saraswati Mata" className="header-image" />
 
-      <h2 className="title">Latest Job Openings</h2>
+ 
 
       <div className="jobs">
-         {jobsData.map((job) => (
-          <div
-            className="job-card"
-            key={job.id}
-            onClick={() => setSelectedJob(job)}
-          >
-            <h3>{job.role}</h3>
-            <p><b>Company:</b> {job.company}</p>
-            <p><b>Location:</b> {job.location}</p>
-            <p>{job.shortDesc}</p>
-          </div>
-        ))}
-        
+  {jobsData.map((job) => (
+    <div
+      className="job-card"
+      key={job.id}
+      onClick={() => setSelectedJob(job)}
+    >
+      {/* Header */}
+      <div className="job-header">
+       <div className="company-row">
+    <img
+      src={job.logo}
+      alt={job.company}
+      className="company-logo"
+    />
+    <p className="company-name">{job.company}</p>
+  </div>
+  
+          <h3 className="job-role">{job.role}</h3>
+       
       </div>
-        {selectedJob && (
-        <div className="modal">
-          <div className="modal-content">
 
-            <span
-              className="close"
-              onClick={() => setSelectedJob(null)}
-            >
-              &times;
-            </span>
+      {/* Info */}
+      <div className="job-info">
+        <p><b>Location:</b> {job.location}</p>
+        <p><b>Package:</b> {job.package}</p>
 
-            <h2>{selectedJob.role}</h2>
+      </div>
 
-            <p><b>Company:</b> {selectedJob.company}</p>
-            <p><b>Location:</b> {selectedJob.location}</p>
-            <p><b>Experience:</b> {selectedJob.experience}</p>
-            <p><b>Skills:</b> {selectedJob.skills}</p>
+      {/* Footer */}
+      <div className="job-footer">
+        <button className="view-btn">
+          View Details
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
 
-            <p className="full-desc">
-              {selectedJob.fullDesc}
-            </p>
+{selectedJob && (
+  <div className="job-modal-overlay" onClick={() => setSelectedJob(null)}>
+    <div
+      className="job-modal"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        className="job-close"
+        onClick={() => setSelectedJob(null)}
+      >
+        ✕
+      </button>
 
-            <a
-              href={selectedJob.apply}
-              target="_blank"
-              rel="noreferrer"
-              className="apply-btn"
-            >
-              Apply Now
-            </a>
+      {/* Top Section */}
+      <div className="job-top">
+        <img
+          src={selectedJob.logo}
+          alt={selectedJob.company}
+          className="job-logo"
+        />
 
-          </div>
+        <div className="job-title">
+          <h2>{selectedJob.role}</h2>
+          <span>{selectedJob.company}</span>
         </div>
-      )}
-     
+      </div>
+
+      {/* Meta Info */}
+      <div className="job-meta">
+        <div>
+          <label>Location</label>
+          <p>{selectedJob.location}</p>
+        </div>
+
+        <div>
+          <label>Experience</label>
+          <p>{selectedJob.experience}</p>
+        </div>
+
+        <div>
+          <label>Package</label>
+          <p>{selectedJob.package}</p>
+        </div>
+      </div>
+
+      {/* Short Description */}
+      <div className="job-highlight">
+        {selectedJob.shortDesc}
+      </div>
+
+      {/* Skills */}
+      <div className="job-section">
+        <h3>Required Skills</h3>
+        <div className="skill-tags">
+          {selectedJob.skills.split(",").map((skill, i) => (
+            <span key={i}>{skill.trim()}</span>
+          ))}
+        </div>
+      </div>
+
+      {/* Full Description */}
+      <div className="job-section">
+        <h3>Job Description</h3>
+        <p className="job-desc">{selectedJob.fullDesc}</p>
+      </div>
+
+      {/* Footer */}
+      <div className="job-footer">
+        <a
+          href={selectedJob.apply}
+          target="_blank"
+          rel="noreferrer"
+          className="job-apply"
+        >
+          Apply on Deloitte Careers
+        </a>
+      </div>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 }
