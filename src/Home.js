@@ -1,13 +1,5 @@
 import React, { useState } from "react";
 import "./Home.css";
-import saraswati_mata from "./images/saraswati_mata.jpg";
-import deloitte from "./images/deloitte.png";
-import ibm from "./images/ibm.png";
-import amazon from "./images/amazon.png";
-import atlassian from "./images/atlassian.png";
-import databricks from "./images/databricks.png";
-import oracle from "./images/oracle.png";
-import jpmorgan from "./images/JpmorganChase.png";
 
 
 const jobsData = [
@@ -15,7 +7,7 @@ const jobsData = [
     id: 1,
     role: "Full Stack Software Engineer – Assistant Manager (CL4)",
     company: "Deloitte",
-    logo: deloitte,
+    logo: "/images/deloitte.webp",
     location: "Hyderabad, Telangana, India",
     package: "₹18 – 30 LPA",
     shortDesc:
@@ -32,7 +24,7 @@ const jobsData = [
     id: 2,
     role: "Software Developer",
     company: "IBM",
-    logo: ibm,
+    logo: "/images/ibm.webp",
     location: "India",
     package: "₹10 – 18 LPA",
     shortDesc:
@@ -49,7 +41,7 @@ const jobsData = [
     id: 3,
     role: "Software Development Engineer (SDE I – L4)",
     company: "Amazon",
-    logo: amazon,
+    logo: "/images/amazon.webp",
     location: "India",
     package: "₹24 – 30 LPA",
     shortDesc:
@@ -66,7 +58,7 @@ const jobsData = [
     id: 4,
     role: "Data Engineer",
     company: "Atlassian",
-    logo:atlassian,
+    logo:"/images/atlassian.webp",
     location: "Remote / Hybrid",
     package: "₹20 – 35 LPA",
     shortDesc:
@@ -83,7 +75,7 @@ const jobsData = [
     id: 5,
     role: "Staff Software Engineer – Networking",
     company: "Databricks",
-    logo: databricks,
+    logo: "/images/databricks.webp",
     location: "Bengaluru, India",
     package: "₹23 – 42 LPA",
     shortDesc:
@@ -100,7 +92,7 @@ const jobsData = [
     id: 6,
     role: "Applications Developer",
     company: "Oracle",
-    logo: oracle,
+    logo: "/images/oracle.webp",
     location: "Hyderabad, Telangana, India",
     package: "₹12 – 20 LPA",
     shortDesc:
@@ -117,7 +109,7 @@ const jobsData = [
     id: 7,
     role: "Software Engineer II – UI (Angular)",
     company: "JPMorganChase",
-    logo: jpmorgan,
+    logo: "/images/JpmorganChase.webp",
     location: "India",
     package: "₹14 – 22 LPA",
     shortDesc:
@@ -134,7 +126,7 @@ const jobsData = [
     id: 8,
     role: "Software Engineer / Software Developer I",
     company: "Oracle",
-    logo: oracle,
+    logo: "/images/oracle.webp",
     location: "Bengaluru, Karnataka, India",
     package: "₹8 – 14 LPA",
     shortDesc:
@@ -157,7 +149,7 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <img src={saraswati_mata} alt="Saraswati Mata" className="header-image" />
+      <img src="/images/saraswati_mata.webp" alt="Saraswati Mata" className="header-image" />
 
  
 
